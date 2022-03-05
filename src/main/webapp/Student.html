@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Form Elements">
+        <title>Form Elements</title>
+    </head>
+    
+    <body>
+        <h2>Student Information</h2>
+        <form action="FormInformationServlet">
+            <table border="3" >
+
+                <tr>
+                    <th><label for="input_text">Name:</label></th>
+                    <td><input type="text" placeholder="Name" name="Name" maxlength="20"></td>
+                </tr>
+
+                <tr>
+                    <th><label for="input_text">Father Name:</label></th>
+                    <td><input type="text" placeholder="Fname" name="FName" maxlength="20"></td>
+                </tr>
+
+                <tr>
+                   <th><label for="input_text">SurName:</label></th>
+                   <td><input type="text" placeholder="Surname"  name="Surname" maxlength="20"></td>
+                </tr>     
+
+                <tr>
+                    <th><label for="input_email">Email:</label></th>
+                    <td><input type="email" name="email" placeholder="test@domain.com"></td> 
+                </tr>
+
+                <tr>
+                   <th><label for="start">DOB:</label></th>
+                   <td><input type="date" value="<% =get_date %>" name="dob"></td>
+                </tr>
+
+                <tr>
+                    <th><label for="select">Group</label></th>
+                    <td> <select name="group">
+                        <optgroup label="Option Group ">
+                                <option>Medical</option>
+                                <option>Engineering</option>
+                                <option>General</option>
+                        </optgroup>
+                     </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label><strong>Select Gender</strong></label></th>
+                    <td><ul>
+
+                        <li>
+                            <label for="male">Male &nbsp;&nbsp;</label>
+                            <input name="gender" value="Male" type="radio" checked>                   
+                        </li>
+
+                        <li>
+                          <label for="female">Female</label>
+                          <input  name="gender" value="Female" type="radio" >                         
+                        </li>
+
+                    </ul></td>
+                </tr>
+
+                <tr>
+                    <th><label><strong>Which special services do you need :</strong></label><br><br></th>
+                    <td><label for="checkbox_bus">Online Class:</label>
+                     <input  name="services" type="checkbox" value="Online Class">                            
+                     <label for="checkbox_lunch">Physical Class:</label>
+                     <input name="services" type="checkbox" value="Physical Class">                            
+                     <label for="checkbox_facility">Video Lecture:</label>
+                     <input name="services" type="checkbox" value="Video Lecture">                                  
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><label for="textarea_comments"><strong>Have any Comments?</strong></label><br></th>
+                    <td><textarea name="textarea_comments" rows="5" cols="50" placeholder="Your comments here"></textarea></td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </th>
+                </tr>
+            </table>  
+        </form>
+    </body>
+</html>    

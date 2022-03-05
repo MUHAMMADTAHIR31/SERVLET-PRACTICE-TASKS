@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Shipping</title>
+    </head>
+
+<body>
+    <script>
+    function setValue() {
+        
+        alert("hi");
+        var name = document.getElementById("name").value;
+        var cno = document.getElementById("cno").value;
+        var address = document.getElementById("address").value;
+        var city = document.getElementById("city").value;
+        var state = document.getElementById("state").value;
+        var country = document.getElementById("country").value;
+        
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.open("GET", "testjsp.jsp", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("name="+name+"&cno="+cno+"&address="+address+"&city="+city+"&state=" + state + "&country="+country);
+
+    }
+    </script>    
+        
+     <input type="button" value="Same as billing address"   style="color: #FFFFFF;" class="link-style" onclick="setValue();"  />
+             <table cellpadding="20">
+                    <tr>
+                        <td >Name : * </td>
+                        <td><input type="text" id="name" name="name" /></td>
+
+                    </tr>
+                     <tr>
+                        <td>Contact Number : </td>
+                        <td><input type="text" name="cno" id="cno"  /></td>
+                    </tr>
+                    <tr>
+                        <td>Address : * </td>
+                        <td><input type="text" name="address" id="address" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>City : *</td>
+                        <td><input type="text" name="city" id="city"  /></td>
+                    </tr>
+                    <tr>
+                        <td>State : * </td>
+                        <td><input type="text" name="state" id="state" /></td>
+                    </tr>
+                    <tr>
+                        <td>Country : *</td>
+                        <td><input type="text" name="country" id="country" /></td>
+                    </tr>
+
+            </table>                                
+    </body>
+</html>
+           

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      
+        <script>
+            // take the operator input
+            var operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+            // take the operand input
+            var number1 = parseFloat(prompt('Enter first number: '));
+            var number2 = parseFloat(prompt('Enter second number: '));
+
+            var result;
+
+            // using if...else if... else
+            if (operator == '+') {
+                result = number1 + number2;
+            }
+            else if (operator == '-') {
+                result = number1 - number2;
+            }
+            else if (operator == '*') {
+                result = number1 * number2;
+            }
+            else {
+                result = number1 / number2;
+            }
+
+            // display the result
+            console.log('Result'+result);
+        </script>
+    </body>
+</html>
